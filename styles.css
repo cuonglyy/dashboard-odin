@@ -18,9 +18,21 @@
 
 #sidebar {
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 4fr 6fr;
   background-color: #3b82f6;
   padding: var(--padding);
+  color: white;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo > a > span {
+  font-size: 28px;
+  font-weight: 900;
 }
 
 #sidebar ul li {
@@ -30,18 +42,69 @@
 #sidebar a {
   text-decoration: none;
   color: white;
-  
+  font-weight: 900;
+}
+
+#sidebar li a:hover {
+  text-decoration: underline;
+}
+
+.nav ul {
+  display: grid;
+  font-size: 18px;
+  gap: 18px;
+  padding-left: 6px;
+}
+
+.nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 #rightside-container {
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 6fr;
 }
 
 #header {
   display: grid;
-  grid-template: 1fr 1fr / 2fr 1fr;
+  grid-template: 1fr 2fr / 1fr 1fr;
   background-color: #5eead4;
+  padding: 10px 36px 10px 36px;
+}
+
+#search-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#search-bar > #search {
+  height: 26px;
+  width: 100%;
+  border-radius: 12px;
+  border: 0px solid white;
+  background-color: #e2e8f0;
+}
+
+#profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  padding-right: 32px;
+}
+
+.profile-pic {
+  height: 48px;
+  width: 48px;
+  border-radius: 24px;
+}
+
+#welcome-container {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 4f;
 }
 
 #main-content {
