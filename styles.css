@@ -215,7 +215,7 @@ button, input[type="submit"], input[type="reset"] {
 #announcements {
   grid-template: 1fr auto 1fr auto 1fr / 1fr;
   height: 100%;
-  padding: 24px;
+  padding: 36px;
 }
 
 #announcements > .post > .title {
