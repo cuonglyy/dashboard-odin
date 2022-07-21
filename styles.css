@@ -174,18 +174,19 @@ button, input[type="submit"], input[type="reset"] {
 #projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  padding-top: 8px;
   gap: 18px;
 }
 
 .project-card {
   display: grid;
-  height: 250px;
-  grid-template: 3fr 1fr / 8px 4fr;
+  height: auto;
+  grid-template: 2fr auto / 8px 2fr;
   background-color: white;
 }
 
 #announcements-container {
+  display: grid;
+  grid-template: auto 2fr / 1fr;
   grid-area: 1 / 2 / 2 / 3;
 }
 
@@ -196,7 +197,36 @@ button, input[type="submit"], input[type="reset"] {
 #announcements,
 #trending {
   display: grid;
+  grid-template-rows: 1 / 2;
   background-color: white;
+}
+
+#announcements {
+  grid-template: 1fr auto 1fr auto 1fr / 1fr;
+  padding: 24px;
+  margin-top: 8px;
+  height: 100%;
+}
+
+#announcements > .post > .title {
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+#announcements > .post > .content {
+  font-size: 13px;
+}
+
+#announcements > .line {
+  height: 1px;
+  border: 1px solid #cbd5e1;
+  border-radius: 1px;
+  margin-bottom: 22px;
+}
+
+#trending {
+  grid-template: repeat(4, 1fr) / 1fr 2fr;
 }
 
 #project-container > p,
@@ -206,7 +236,12 @@ button, input[type="submit"], input[type="reset"] {
   font-weight: 900;
 }
 
-.project-card {
+#projects {
+  padding-top: 8px;
+}
+
+.project-card,
+#announcements {
   border-radius: 10px;
 }
 
@@ -219,7 +254,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .card-content .title {
-  font-size: 24px;
+  font-size: 20px;
   margin: 4px 0 8px 0;
   font-weight: 900;
 }
@@ -237,7 +272,8 @@ button, input[type="submit"], input[type="reset"] {
 .card-buttons {
   display: flex;
   justify-content: flex-end;
-  margin-right: 24px;
+  margin-right: 16px;
+  padding: 8px;
   gap: 15px;
 }
 
