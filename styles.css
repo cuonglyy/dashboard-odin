@@ -87,9 +87,9 @@ button, input[type="submit"], input[type="reset"] {
 
 #header {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr 1fr / 2fr 1fr;
   padding: 10px 36px 10px 36px;
-  box-shadow: 2px 3px 4px 3px rgba(0, 0, 0, 30%);
+  box-shadow: 6px 16px 4px 3px rgba(0, 0, 0, 30%);
 }
 
 #search-bar {
@@ -100,10 +100,11 @@ button, input[type="submit"], input[type="reset"] {
 
 #search-bar > #search {
   height: 26px;
-  width: 100%;
+  width: 90%;
   border-radius: 12px;
   border: 0px solid white;
   background-color: #e2e8f0;
+  padding: 8px;
 }
 
 #profile-container {
@@ -142,7 +143,7 @@ button, input[type="submit"], input[type="reset"] {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 36px;
 }
 
 #welcome-container, 
@@ -161,21 +162,20 @@ button, input[type="submit"], input[type="reset"] {
 #main-content {
   display: grid;
   grid-template: 1fr 1fr / 3fr 1fr;
-  padding: 24px;
+  padding: 18px 32px 18px 32px;
   gap: 16px;
   background-color: #e2e8f0;
 }
 
 #project-container {
   grid-row: 1 / 3;
-  background-color: #fde047;
 }
 
 #projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   padding-top: 8px;
-  gap: 15px;
+  gap: 18px;
 }
 
 .project-card {
@@ -187,12 +187,16 @@ button, input[type="submit"], input[type="reset"] {
 
 #announcements-container {
   grid-area: 1 / 2 / 2 / 3;
-  background-color: #fca5a5;
 }
 
 #trending-container {
   grid-area: 2 / 2 / 3 / 3;
-  background-color: #f0abfc;
+}
+
+#announcements,
+#trending {
+  display: grid;
+  background-color: white;
 }
 
 #project-container > p,
@@ -206,12 +210,16 @@ button, input[type="submit"], input[type="reset"] {
   border-radius: 10px;
 }
 
+.project-card:hover {
+  transform: scale(102%);
+}
+
 .card-content {
   padding: 24px 48px 24px 24px;
 }
 
 .card-content .title {
-  font-size: 18px;
+  font-size: 24px;
   margin: 4px 0 8px 0;
   font-weight: 900;
 }
@@ -220,4 +228,21 @@ button, input[type="submit"], input[type="reset"] {
   grid-row: 1 / 3;
   background: linear-gradient(#2563eb, #dc2626);
   border-radius: 10px 0 0 10px;
+}
+
+.card-buttons > button > img {
+  width: 30px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 24px;
+  gap: 15px;
+}
+
+button:active,
+#sidebar li a:active,
+.logo a:active {
+  transform: scale(97%);
 }
