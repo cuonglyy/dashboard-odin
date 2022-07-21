@@ -199,11 +199,11 @@ button, input[type="submit"], input[type="reset"] {
   display: grid;
   grid-template-rows: 1 / 2;
   background-color: white;
+  padding: 24px;
 }
 
 #announcements {
   grid-template: 1fr auto 1fr auto 1fr / 1fr;
-  padding: 24px;
   margin-top: 8px;
   height: 100%;
 }
@@ -225,8 +225,20 @@ button, input[type="submit"], input[type="reset"] {
   margin-bottom: 22px;
 }
 
+#trending-container {
+  display: grid;
+  margin-top: 18px;
+  grid-template: auto 2fr / 1fr;
+}
+
 #trending {
-  grid-template: repeat(4, 1fr) / 1fr 2fr;
+  grid-template: repeat(4, 1fr) / 1fr;
+  height: 100%;
+
+}
+
+.profile > a {
+  display: flex;
 }
 
 #project-container > p,
@@ -241,7 +253,8 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .project-card,
-#announcements {
+#announcements,
+#trending {
   border-radius: 10px;
 }
 
